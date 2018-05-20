@@ -1,0 +1,30 @@
+{
+  "name": "moepub",
+  "version": "1.0.0",
+  "description": "something something anime idk experiment #83483",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insanity54/moepub.git"
+  },
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/insanity54/moepub/issues"
+  },
+  "homepage": "https://github.com/insanity54/moepub#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "monocle": "^1.1.51",
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
