@@ -7,17 +7,14 @@ const tasks = require('./tasks');
 const watcher = new WatchIO();
 
 
-const processFile = (path) => {
-    console.log(`Change detected. File ${path}`);
-    getThumbnails(path);
-}
+const processFile = (p) => {
 
-
-const getThumbnails = (path) => {
-    tasks.getVideoDuration(p)
-        .then((duration) => {
-            tasks.getVideoFrameSamples(path, duration, 8)
-        })
+    if (path.extname(p) === '.mp4' ||
+        path.extname(p) === '.mkv'
+    ) {
+        console.log(`Change detected. File ${p}`);
+        tasks.getThumbnails(p, 5);
+    }
 }
 
 
@@ -32,3 +29,5 @@ watcher.on('create', function ( file, stat ) {
     console.log(stat);
     processFile(file);
 });
+
+console.log("Server is started. To begin processing video files, place videos in the vids folder.")
